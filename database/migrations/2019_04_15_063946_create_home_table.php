@@ -28,6 +28,6 @@ class CreateHomeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExits('home');
+        Schema::dropIfExists('home');
     }
 }
