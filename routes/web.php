@@ -26,3 +26,21 @@ Route::get('/products', function () {
 Route::get('/store', function () {
     return view('home/store');
 })->name('store');
+
+// management's routes
+Route::get('/admin/login', function () {
+    return view('management.login');
+});
+
+Route::post('/admin/login', 'Auth\LoginController@login')->name('login');
+
+// use auth middleware to authenticate
+Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
+
+    // logout
+    Route::get('/admin/logout', 'Auth\LoginController@logout')->name('logout');
+
+    // modify website page
+    Route::get('/', 'Management\WebsiteController@edit')->name('website.edit');
+    Route::post('/', 'Management\WebsiteController@update')->name('website.update');
+});
