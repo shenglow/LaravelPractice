@@ -13,6 +13,10 @@
     <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/management.css') }}" rel="stylesheet">
+    <script src="{{ asset('tinymce/tinymce.min.js') }}"></script>
+    <script>
+        tinymce.init({ selector:'textarea' });
+    </script>
 </head>
 
 <body>

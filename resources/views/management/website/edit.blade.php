@@ -2,6 +2,8 @@
 
 @section('title', 'Website Edit')
 
+@section('nav_website', 'active')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

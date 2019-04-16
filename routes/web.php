@@ -43,4 +43,8 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     // modify website page
     Route::get('/', 'Management\WebsiteController@edit')->name('website.edit');
     Route::post('/', 'Management\WebsiteController@update')->name('website.update');
+
+    // modify home page
+    Route::get('/home', 'Management\HomeController@edit')->name('home.edit');
+    Route::post('/home', 'Management\HomeController@update')->name('home.update');
 });
