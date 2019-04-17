@@ -52,6 +52,9 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::get('/about', 'Management\AboutController@edit')->name('about.edit');
     Route::post('/about', 'Management\AboutController@update')->name('about.update');
 
+    // modify product page
+    Route::resource('/product', 'Management\ProductController', ['except' => ['show']]);
+
     // modify store page
     Route::get('/store', 'Management\StoreController@edit')->name('store.edit');
     Route::post('/store', 'Management\StoreController@update')->name('store.update');

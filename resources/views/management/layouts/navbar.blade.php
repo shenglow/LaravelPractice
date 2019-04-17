@@ -10,7 +10,7 @@
                 <a class="nav-item nav-link @yield('nav_website')" href="{{ route('admin.website.edit') }}">Website</a>
                 <a class="nav-item nav-link @yield('nav_home')" href="{{ route('admin.home.edit') }}">Home</a>
                 <a class="nav-item nav-link @yield('nav_about')" href="{{ route('admin.about.edit') }}">About</a>
-                <a class="nav-item nav-link" href="">Products</a>
+                <a class="nav-item nav-link @yield('nav_product')" href="{{ route('admin.product.index') }}">Products</a>
                 <a class="nav-item nav-link @yield('nav_store')" href="{{ route('admin.store.edit') }}">Store</a>
                 <a class="nav-item nav-link" href="{{ route('admin.logout') }}">Logout</a>
             </div>
