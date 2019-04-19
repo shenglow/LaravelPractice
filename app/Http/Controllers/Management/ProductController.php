@@ -112,7 +112,9 @@ class ProductController extends Controller
 
         $product->title = $request->input('title');
         $product->subtitle = $request->input('subtitle');
-        $product->image = $fileName;
+        if (isset($fileName)) {
+            $product->image = $fileName;
+        }
         $product->description = $request->input('description');
 
         $product->save();

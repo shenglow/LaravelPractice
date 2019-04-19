@@ -38,7 +38,7 @@ class AboutController extends Controller
         }
 
         $about->content = $request->input('content');
-        if ($fileName) $about->image = $fileName;
+        if (isset($fileName)) $about->image = $fileName;
 
         $about->save();
 

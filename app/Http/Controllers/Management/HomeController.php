@@ -39,7 +39,7 @@ class HomeController extends Controller
 
         $home->title = $request->input('title');
         $home->content = $request->input('content');
-        if ($fileName) {
+        if (isset($fileName)) {
             $home->image = $fileName;
         }
         $home->save();
